@@ -30,23 +30,6 @@ glm::vec3 Sphere::normal(const glm::vec3& pi) const {
 	return (pi - myCenter) / (float)myRadius; 
 }
 
-void Sphere::makeSphere() {
-	const double PI = 3.1415;
-	myVertices.clear();
-
-	for (double phi = 0.; phi < 2 * PI; phi += PI / 10.) {
-		for (double theta = 0.; theta < PI; theta += PI / 10.) {
-			glm::vec3 vertex;
-			vertex.x = myRadius * cos(phi) * sin(theta) + myCenter.x;
-			vertex.y = myRadius * sin(phi) * sin(theta) + myCenter.y;
-			vertex.z = myRadius * cos(theta) + myCenter.z;
-			myVertices.push_back(vertex);
-		}
-	}
-
-	return;
-}
-
 bool Sphere::solveQuadrics(float const &a, float const &b, float const &c, float &x0, float x1) {
 	float discr = b * b - 4 * a*c;
 
