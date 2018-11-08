@@ -6,11 +6,12 @@
 #include "Sphere.h"
 
 
-Sphere::Sphere(glm::vec3 center, float radius, glm::vec3 color) 
+Sphere::Sphere(glm::vec3 center, float radius, glm::vec3 color, float _matIntensity) 
 {
 	myRadius = radius;
 	myCenter = center;
 	myColor = color;
+	matIntensity = _matIntensity;
 	rad2 = myRadius * myRadius;
 }
 

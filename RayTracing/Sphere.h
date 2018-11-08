@@ -6,13 +6,13 @@
 #include "Raycast.h"
 #include "Shape.h"
 
-class Sphere : Shape
+class Sphere : public Shape
 {
 	float myRadius;
 	float rad2;
 
 public:
-	Sphere(glm::vec3 center, float radius, glm::vec3 color);
+	Sphere(glm::vec3 center, float radius, glm::vec3 color, float _matIntensity);
 	
 	float getRadius();
 	
