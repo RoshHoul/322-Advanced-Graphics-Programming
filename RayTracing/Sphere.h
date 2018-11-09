@@ -18,6 +18,7 @@ public:
 	
 	glm::vec3 getPosition();
 	glm::vec3 getColor();
+	void movePosition(glm::vec3 position);
 	glm::vec3 normal(const glm::vec3 & pi) const;
 
 	bool solveQuadrics(float const & a, float const & b, float const & c, float & x0, float x1);

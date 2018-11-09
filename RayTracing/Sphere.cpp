@@ -27,6 +27,10 @@ glm::vec3 Sphere::getColor() {
 	return myColor;
 }
 
+void Sphere::movePosition(glm::vec3 position) {
+	myCenter += position;
+}
+
 glm::vec3 Sphere::normal(const glm::vec3& pi) const { 
 	return (pi - myCenter) / (float)myRadius; 
 }
