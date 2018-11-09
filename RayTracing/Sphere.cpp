@@ -1,8 +1,4 @@
 #include "pch.h"
-#include <glm/glm.hpp>
-#include <vector>
-#include <iostream>
-#include "Raycast.h"
 #include "Sphere.h"
 
 
@@ -66,7 +62,6 @@ bool Sphere::OnIntersection(Raycast &ray, float& t) {
 	glm::vec3 origin = ray.getOrigin();
 	glm::vec3 dir = ray.getDirection();
 
-
 	glm::vec3 l = origin - myCenter;
 	float a = glm::dot(dir, dir);
 	float b = 2 * glm::dot(l, dir);
@@ -84,8 +79,6 @@ bool Sphere::OnIntersection(Raycast &ray, float& t) {
 	}
 
 	t = t0;
-
-
 	return true;
 }
 
