@@ -12,12 +12,12 @@ protected:
 public:
 	Shape();
 	
-	glm::vec3 getPosition();
-	glm::vec3 getColor();
-	glm::vec3 normal(const glm::vec3 & pi ) const;
-	float getIntensity();
+	virtual glm::vec3 getPosition();
+	virtual glm::vec3 getColor();
+	virtual glm::vec3 normal(const glm::vec3 & pi ) const = 0;
+	virtual float getIntensity();
 	
-	bool OnIntersection(Raycast & ray, float & t);
+	virtual bool OnIntersection(Raycast & ray, float & t) = 0;
 
 	~Shape();
 };

@@ -14,6 +14,11 @@ glm::vec3 Box::getColor()
 	return myColor;
 }
 
+glm::vec3 Box::normal(const glm::vec3 & pi) const
+{
+	return glm::vec3();
+}
+
 bool Box::OnIntersection(Raycast &ray, float &t) {
 
 	float tmin = (bounds[0].x - ray.getOrigin().x) / ray.getDirection().x;
