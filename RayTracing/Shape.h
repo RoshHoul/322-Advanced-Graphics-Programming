@@ -9,9 +9,10 @@ protected:
 	glm::vec3 myColor;
 	float matIntensity;
 
+
 public:
 	Shape();
-	
+
 	virtual glm::vec3 getPosition();
 	virtual glm::vec3 getColor();
 	virtual glm::vec3 normal(const glm::vec3 & pi ) const = 0;

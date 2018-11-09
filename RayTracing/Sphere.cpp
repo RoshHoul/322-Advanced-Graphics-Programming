@@ -85,13 +85,6 @@ bool Sphere::OnIntersection(Raycast &ray, float& t) {
 	return true;
 }
 
-
-
-
-
-
-
-
 Sphere::~Sphere()
 {
 }

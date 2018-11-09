@@ -7,6 +7,7 @@ Shape::Shape()
 
 }
 
+
 glm::vec3 Shape::getPosition()
 {
 	return myCenter;
